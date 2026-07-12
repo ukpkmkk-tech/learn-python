@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# 日志与缓存
+*.log
+*.pot
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 系统
+.DS_Store
+Thumbs.db
