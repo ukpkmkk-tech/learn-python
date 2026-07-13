@@ -80,3 +80,47 @@ for i_1 in range(0,10,2):
  # 倒序:步长为负
 for i_2 in range(10,0,-1):
     print(i_2)
+
+ # 三、While 循环
+
+count = 0
+while count < 3:
+     print(f"第{count+1}次")
+     count += 1
+
+ # 四、break和continue
+ # break:立即跳出整个循环
+for i_2 in range(10):
+    if i_2 ==6:
+        break
+    print(i_2)
+ # continue:跳过本次,继续下次
+for i_3 in range(10):
+    if i_3 == 4:
+        continue
+    print(i_3)
+ # 字符串进阶
+ # 1、索引 (取一个字符)
+s = "Hello,Python"
+print(s[0])
+print(s[1])
+print(s[-2])
+print(s[-3])
+
+ # 2、切片 (取一段字符)
+ # 格式:s[起,止],包含起,不包含止
+print(s[0:2])           # Hello    前 2 个字符
+print(s[7:])            # Python   从第 7 个到末尾
+print(s[:5])            # Hello    从头到第 5 个
+print(s[-6:])           # Python   最后 6 个字符
+print(s[:])             # Hello, Python  完整复制
+
+ # 3、常用字符串
+s_1 = " Hello,Python "
+print(s_1.strip())      # "Hello, Python"  去两端空格
+print(s_1.upper())      # 全大写
+print(s_1.lower())      # 全小写
+print(s_1.replace("Python", "Java"))    # 替换
+print(s_1.split(","))   # 按,分割成列表
+print(len(s_1))         # 字符串长度
+print("Hello" in s_1)   # True 判断是否包含
