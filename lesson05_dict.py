@@ -72,7 +72,7 @@ students = [
 for s in students:
     print(f"{s['name']}: {s['score']}")
 
-# 找出最高分
+# 找出最低分
 lowest = students[0]
 for s in students:
     if s["score"] < lowest["score"]:
@@ -86,3 +86,78 @@ meal = {
 }
 print(meal["breakfast"])
 print(meal["breakfast"][1])
+
+# 作业1
+friends = {"dc":100,"lzy":200,"xy":300}
+friends["hh"] = 400
+friends["dc"] += 1
+for name,age in friends.items():
+    print(f"{name}: {age}岁")
+
+# 作业2
+text = "hello,world"
+count = {}
+for char in text:
+    if char in count:
+        count[char] += 1
+    else:
+        count[char] = 1
+print(count)
+
+# 作业A
+prices = {"苹果": 5, "香蕉": 3, "橘子": 2}
+print(prices.get("西瓜","本店没有西瓜"))
+prices["葡萄"] = 8
+prices["香蕉"] = 5
+removed = prices.pop("橘子")
+print(removed)
+for key,value in prices.items():
+    print(f"{key}: {value}元/斤")
+
+# 作业B
+words = {"苹果": "apple", "猫": "cat", "狗": "dog", "书": "book"}
+print("我是翻译小助手，请输入中文词我来告诉你它的英文吧！")
+while True :
+    word = input(f"请输入中文词:")
+    if word == "结束":
+        break
+    print(words.get(word,"词典里没有这个词"))
+
+# 作业C
+sentence = "the cat and the dog and the bird"
+sentence_split = sentence.split( )
+count_01 = {}
+for word_01 in sentence_split:
+    if word_01 in count_01:
+        count_01[word_01] += 1
+    else:
+        count_01[word_01] = 1
+print(count_01)
+
+#作业D
+students = [
+      {"name": "dc",  "score": 88},
+      {"name": "lzy", "score": 55},
+      {"name": "xy",  "score": 92},
+      {"name": "hh",  "score": 74},
+  ]
+
+# 平均值计算
+def average():
+    total = 0
+    for p in students:
+        total += p["score"]
+    return total/len(students)
+print(f"平均分是{average()}")
+
+# 最高分计算
+best = students[0]
+for stu in students:
+    if stu["score"] > best["score"]:
+        best = stu
+print(f"最高分是{best['name']}:{best['score']}")
+
+#不及格
+for stu in students:
+    if stu["score"] < 60:
+        print(f"不及格的有:{stu['name']}")
