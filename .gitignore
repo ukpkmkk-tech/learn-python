@@ -17,6 +17,9 @@ ENV/
 # VS Code
 .vscode/
 
+# 草稿/临时测试文件
+cg.py
+
 # 日志与缓存
 *.log
 *.pot
