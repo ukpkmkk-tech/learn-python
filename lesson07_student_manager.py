@@ -41,6 +41,8 @@ def show_all():
     for name, info in students.items():
         print(f"{name}:{info['score']}分")
     print("-"*30)
+
+
 def find_student():
     name = input("请输入要查找的姓名:").strip()
 
